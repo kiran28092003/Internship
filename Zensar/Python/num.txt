@@ -1,0 +1,1 @@
+value of A:25, value of B:18

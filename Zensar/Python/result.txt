@@ -1,0 +1,4 @@
+Addition: 43
+Subtraction: 7
+Multiplication: 450
+Division: 1.3888888888888888
