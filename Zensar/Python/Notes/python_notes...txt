@@ -1,0 +1,139 @@
+https://github.com/anirudhagaikwad/Android_Programming/tree/master/Projects/WeatherApp
+pyhon: 
+Framework->library->API
+numpy,panda,Matplotlib
+
+framework= digango,flask,fastAPI
+ORM= library => our program is deal with database using ORM
+-Notepad
+-v s code
+-python editor
+-pychamp ide
+1989- guido van Rossum
+qt->gtk->
+in terms of optimization and execution speed java beat python(java is better)
+pip is a package installer for python
+window exe apex
+linux .def .rpm
+mac 
+3pip install 
+bitwise operators:
+
+        128 64 32 16 8 4 2 1
+ x=35=> 0    0  1  0 0 0 1 1
+ y=23=> 0    0  0  1 0 1 1 1
+ & =>   0    0  0  0 0 0 1 1 and
+ / =>   0    0  1  1 0 0 1 1 or 
+ ^ =>   0    0  1  1 0 1 0 0 x-or
+
+subnet mask
+address range 
+class
+network address
+broadcast address
+**
+
+#OOP : class, object, Inheritance, Access, Modifiers, Exception Handling, 
+class MathematicalOperation:
+    #constructor
+    def __init__(self,x,y):
+        self.x=x;self.y=y
+
+    def addition(self):
+        return self.x+self.y
+    def subtraction(self):
+        return self.x-self.y
+    def multi(self):
+        return self.x*self.y
+    def div(self):
+        return self.x/self.y
+
+obj=MathematicalOperation(15,40)
+print(f"{obj.x} + {obj.y} = {obj.addition()}")
+
+obj=MathematicalOperation(40,15)
+print(f"{obj.x} - {obj.y} = {obj.subtraction()}")
+
+obj=MathematicalOperation(5,5)
+print(f"{obj.x} - {obj.y} = {obj.multi()}")
+
+obj=MathematicalOperation(5,5)
+print(f"{obj.x} / {obj.y} = {obj.div()}")
+
+
+
+Access Modifier:
+1.public //default
+2.private
+3.protected
+
+
+  Q) pythagorous
+  Q) we have a parent class with private value i.e pi
+lets calculate circles area using child class but the pi value you cal use from parent class use constructor
+
+
+Let's learn library: RegEx
+
+^a...s$ #string
+^ ---start symbol
+$ ---end symbol
+. ---variable
+ex. abcds, ashis
+
+period
+.. #string
+ex. aa, bb,bc,acde,depq,kjhgfd,....
+
+caret
+^a #string starting with a
+^ab #string starting with ab
+
+$ Doller
+the doller symbol is used to check if a string ends with a certain character
+a$ #string ends with a
+ex.  formula
+
+* star 
+the star symbol * matches zero or more occurances of the pattern left to it
+ma*n #string ripeates some character
+ex. man,maaan,maanwoman
+
++ plus 
+the plus symbol
+?Question mark
+the question mark symbol matches zero or one occurance of the pattern left to it
+ma?n #string 
+ex.man,maan,maaan
+
+{} Braces
+consider the code: {m,n}. This means at least n,and at most m
+a{2,3} #string
+ex. abc data,aabc daaat,aabc daaaat
+
+[0-9]{2-4} #string
+ex. ab123csde, 12 and 345673
+
+| Alternation
+a|b #string
+ex.ade
+
+()group 
+(a|b|c)xz #string
+ex. abxz,axz czbxz
+
+\backslash 
+used to escape various characters
+ex
+\A----checking starting sysbol as A or not
+
+
+[]-square brackets
+[a-e]-----[abcde]
+[1-4]-----[1234]
+[0-39]----[01239]
+
+repository--->ppt-->notes
+write a program to identify email id address using regEx
+write a program to identify mobile number address using regEx
+
