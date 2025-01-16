@@ -1,0 +1,339 @@
+https://github.com/anirudhagaikwad/Android_Programming/tree/master/Projects/WeatherApp
+plsql: 
+update child6 set id=elt(field(id,1,2,3),4,5,6);
+//to replace the actual values/existing data of row or column with new values 
+field and elt are the functions
+field=row
+
+delete from child6 where id=4;
+
+alter table chaild6 drop primary key;
+
+show create table child6\G
+
+utf universal text format ,timestack independent ,universally global
+
+alter table child6 add(mobile varchar(11); //adding a new coloumn/constraint
+
+describe child6; //describe table
+
+select * from child6; //select all data
+*********
+select first_name,last_name,hire_date,salary*2 as new_sal from employees;
+select employee_id,first_name from employee order by first_name; //by default order by value is in ascending order ....the value for by default value is ACS & DES
+select first_name,last_name,hire_date,salary from employees order by first_name limit 5 offset 3; //start from 4th row and concider next 5 rows. 
+select first_name,last_name,hire_date,salary from employees where salary>13000 order by salary;
+
+comparison op:_
+= equal
+<> not equal to
+> greate than
+< less than
+
+logical op:_
+AND
+ANY
+BETWEEN
+EXISTS
+IN
+LIKE
+  % (percent)-REPRESENTS MORE CHARACTERS AT A TIME
+ _ (underscore) -REPRESENTS ANY SINGLE CHARACTER
+NOT
+OR
+
+
+ex1:
+DECLARE
+    num1 INT := 10;
+    num2 INT := 20;
+    sum  INT;
+BEGIN
+    sum := num1 + num2;
+    DBMS_OUTPUT.PUT_LINE('The sum of ' || num1 || ' and ' || num2 || ' is: ' || sum);
+END;
+ex2:
+select * from EMPLOYEES
+set serveroutput on size 100000
+DECLARE
+    n_employee_id EMPLOYEES.EMPLOYEE_ID%TYPE;
+    v_first_name EMPLOYEES.FIRST_NAME%TYPE;
+    v_first_name EMPLOYEES.LAST_NAME%TYPE;
+    d_hire_date EMPLOYEES.HIRE_DATE%TYPE;
+BEGIN
+        select employee_id,first_name,last_name,HIRE_DATE
+        INTO n_employee_id,v_first_name,v_last_name,d_hire_date
+        FROM  EMPLOYEES
+        where EMPLOYEE_ID=104;
+        DBMS_OUTPUT.PUT_LINE(n_employee_id);
+         DBMS_OUTPUT.PUT_LINE(v_first_name));
+          DBMS_OUTPUT.PUT_LINE(v_last_name);
+           DBMS_OUTPUT.PUT_LINE(d_hire_date);
+end;
+ex3:fetch values from countries where id=1
+
+ex4:
+DECLARE
+    n1 NUMBER := 15; -- First number
+    n2 NUMBER := 25; -- Second number
+    n3 NUMBER := 10; -- Third number
+    greatest NUMBER; -- Variable to store the greatest number
+    smallest NUMBER; -- Variable to store the smallest number
+BEGIN
+    -- Find the greatest number
+    IF n1 >= n2 AND n1 >= n3 THEN
+        greatest := n1;
+    ELSIF n2 >= n1 AND n2 >= n3 THEN
+        greatest := n2;
+    ELSE
+        greatest := n3;
+    END IF;
+
+    -- Find the smallest number
+    IF n1 <= n2 AND n1 <= n3 THEN
+        smallest := n1;
+    ELSIF n2 <= n1 AND n2 <= n3 THEN
+        smallest := n2;
+    ELSE
+        smallest := n3;
+    END IF;
+
+    -- Output the results
+    DBMS_OUTPUT.PUT_LINE('Greatest number is: ' || greatest);
+    DBMS_OUTPUT.PUT_LINE('Smallest number is: ' || smallest);
+END;
+/
+
+DECLARE
+    n1 NUMBER := 15; 
+    n2 NUMBER := 25; 
+    n3 NUMBER := 10;
+    greatest NUMBER;
+    smallest NUMBER; 
+BEGIN
+    -- Find the greatest number
+    IF n1 >= n2 AND n1 >= n3 THEN
+        greatest := n1;
+    ELSIF n2 >= n1 AND n2 >= n3 THEN
+        greatest := n2;
+    ELSE
+        greatest := n3;
+    END IF;
+
+    -- Find the smallest number
+    IF n1 <= n2 AND n1 <= n3 THEN
+        smallest := n1;
+    ELSIF n2 <= n1 AND n2 <= n3 THEN
+        smallest := n2;
+    ELSE
+        smallest := n3;
+    END IF;
+
+    -- Output the results
+    DBMS_OUTPUT.PUT_LINE(greatest);
+    DBMS_OUTPUT.PUT_LINE(smallest);
+END;
+
+select * from Employee;
+DECLARE
+  n_min_salary NUMBER(6,0);
+  n_max_salary NUMBER(6,0);
+  n_mid_salary NUMBER(6,2);
+  n_salary     EMPLOYEES.SALARY%TYPE;
+  n_emp_id     EMPLOYEES.EMPLOYEE_ID%TYPE := 200;
+BEGIN
+  -- Get the salary range and current salary in a single query
+  SELECT j."MIN_SALARY", 
+         j."MAX_SALARY", 
+         e.salary
+  INTO n_min_salary, 
+       n_max_salary, 
+       n_salary
+  FROM JOBS j
+  JOIN EMPLOYEES e 
+  ON j.JOB_ID = e.JOB_ID
+  WHERE e.EMPLOYEE_ID = n_emp_id;
+
+  -- Calculate mid-range salary
+  n_mid_salary := (n_min_salary + n_max_salary) / 2;
+
+  -- Update salary if it is lower than the mid-range
+  IF n_salary < n_mid_salary THEN
+    UPDATE EMPLOYEES
+    SET SALARY = n_mid_salary
+    WHERE EMPLOYEE_ID = n_emp_id;
+  END IF;
+
+  -- Display the updated or current salary
+  DBMS_OUTPUT.PUT_LINE('Updated Employee Information for Employee ID ' || n_emp_id);
+  DBMS_OUTPUT.PUT_LINE('Salary: ' || n_salary);
+END;
+/
+select * from employees where employee_id = 200;
+
+*********
+SET SERVEROUTPUT ON SIZE 1000000;
+DECLARE n_counter NUMBER:=0;
+BEGIN
+    LOOP
+        n_counter:=n_counter+1;
+        DBMS_OUTPUT.PUT_LINE(n_counter);
+        EXIT WHEN n_counter=5;
+    END LOOP;
+END;
+
+**
+SET SERVEROUTPUT ON SIZE 1000000;
+DECLARE
+    n_i NUMBER:=0;
+    n_j NUMBER:=0;
+BEGIN
+    <<outer_loop>>
+    LOOP
+        n_i := n_i + 1;
+        EXIT WHEN n_i = 2;
+        << inner_loop >>
+        LOOP
+            n_j := n_j +1;
+            EXIT WHEN n_j = 5;
+            DBMS_OUTPUT.PUT_LINE('Outer loop counter' || n_i);
+            DBMS_OUTPUT.PUT_LINE('Inner loop counter' || n_j);
+        END LOOP inner_loop;
+    END LOOP outer_loop;
+END;
+
+--Identify Departments with employees in specific regions print region name and name of feptartment in that region:
+DECLARE
+    v_region_name VARCHAR2(25);
+    v_department_name VARCHAR2(30);
+BEGIN
+    -- Loop through each department with employees
+    FOR dept_rec IN (
+        SELECT department_id, department_name, location_id 
+        FROM departments
+        WHERE department_id IN (SELECT DISTINCT department_id FROM employees)
+    ) LOOP
+        -- Fetch the region name using nested subqueries
+        SELECT region_name
+        INTO v_region_name
+        FROM regions r
+        WHERE r.region_id = (
+            SELECT region_id 
+            FROM countries c
+            WHERE c.country_id = (
+                SELECT country_id 
+                FROM locations l
+                WHERE l.location_id = dept_rec.location_id
+            )
+        );
+
+        -- Assign department name from the loop
+        v_department_name := dept_rec.department_name;
+
+        -- Output the results
+        DBMS_OUTPUT.PUT_LINE('Region: ' || v_region_name || ', Department: ' || v_department_name);
+    END LOOP;
+END;
+**
+SET SERVEROUTPUT ON SIZE 1000000;
+BEGIN
+	FOR i IN 1..5 LOOP
+		DBMS_OUTPUT.PUT_LINE('Iteration:' || i);
+	END LOOP;
+END;
+**
+SET SERVEROUTPUT ON;
+
+DECLARE
+    fahrenheit VARCHAR2(10);
+    celsius NUMBER;
+
+    FUNCTION try_parse(iv_number IN VARCHAR2) RETURN NUMBER IS
+    BEGIN
+        RETURN TO_NUMBER(iv_number);
+    EXCEPTION
+        WHEN OTHERS THEN
+            RETURN NULL;
+    END;
+
+    FUNCTION fahrenheit_to_celsius(f_temp IN VARCHAR2) RETURN NUMBER IS
+        f_value NUMBER;
+    BEGIN
+        f_value := try_parse(f_temp);
+        RETURN CASE WHEN f_value IS NOT NULL THEN (f_value - 32) * 5 / 9 ELSE NULL END;
+    END;
+
+BEGIN
+    fahrenheit := '98.6'; 
+    DBMS_OUTPUT.PUT_LINE('Fahrenheit: ' || fahrenheit || ' => Celsius: ' || NVL(TO_CHAR(fahrenheit_to_celsius(fahrenheit)), 'Invalid'));
+
+    fahrenheit := 'abcd'; 
+    DBMS_OUTPUT.PUT_LINE('Fahrenheit: ' || fahrenheit || ' => Celsius: ' || NVL(TO_CHAR(fahrenheit_to_celsius(fahrenheit)), 'Invalid'));
+
+    fahrenheit := '212'; 
+    DBMS_OUTPUT.PUT_LINE('Fahrenheit: ' || fahrenheit || ' => Celsius: ' || NVL(TO_CHAR(fahrenheit_to_celsius(fahrenheit)), 'Invalid'));
+END;
+**
+
+SET SERVEROUTPUT ON 1000;
+
+DECLARE
+    fahrenheit NUMBER;
+    celsius NUMBER;
+
+FUNCTION fahrenheit_to_celsius(f_temp IN NUMBER) RETURN NUMBER IS
+BEGIN
+    RETURN (f_temp - 32) * 5 / 9;
+END;
+
+BEGIN
+    fahrenheit := 98.6;
+    celsius := fahrenheit_to_celsius(fahrenheit);
+    DBMS_OUTPUT.PUT_LINE('Fahrenheit: ' || fahrenheit);
+    DBMS_OUTPUT.PUT_LINE('Celsius: ' || celsius);
+END;
+***
+
+SET SERVEROUTPUT ON SIZE 100000000;
+DECLARE
+    --declare a cursor
+    CURSOR cur_chief IS 
+        SELECT first_name,
+               last_name,
+               department_name
+    FROM employees e
+    INNER JOIN departments d ON  d.manager_id = e.employee_id;
+    r_chief cur_chief%ROWTYPE;
+BEGIN
+    OPEN cur_chief;
+    Loop
+        --fetch information from cursor into record
+        FETCH cur_chief INTO r_chief;
+        EXIT WHEN cur_chief%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(r_chief.department_name || '-' || r_chief.first_name || ',' || r_chief.last_name);
+    END LOOP;
+    CLOSE cur_chief;
+END;
+**
+DECLARE 
+    r_employee EMPLOYEES%ROWTYPE;
+BEGIN
+    SELECT * INTO r_employee
+    FROM employees
+    WHERE employee_id = 100;
+    IF  SQL%FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('Employee ID: ' || r_employee.employee_id);
+    DBMS_OUTPUT.PUT_LINE('First_name: ' || r_employee.first_name);
+    DBMS_OUTPUT.PUT_LINE('last_name: ' || r_employee.last_name);
+    ELSE 
+        DBMS_OUTPUT.PUT_LINE('DATA is not available');
+    END IF;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('EMPLOYEE WITH id 100 NOT FOUND');
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('An Error occured:' || SQLERRM);
+END;
+
+**
+
