@@ -1,0 +1,712 @@
+ocjp certification
+jee certification
+type meaning - class
+**********************************************************************
+unit testing - method testing
+unit-smallest part of the program that we can test.(Junit framework is a tool to test methods automatically)
+**********************************************************************
+concrete method- all methods definition is given
+concrete class -  if all methods are concrete then class is concrete
+abstract method- methods are only declared
+abstract class- any method is abstract then class is abstract class
+-that class also can be abstract class which having all concrete methods
+interface - specification
+implementation - implementing class
+IDE - integrated development environment
+API - application programming interface
+
+OOP's Introduction
+
+1.Evaluation of Programming Languages
+2.introduction of OOPS
+emphasis-focus
+structural-c, pascal ,Fortran
+1st generation language-machine language
+2nd generation language-assembly language
+3rd generation language-human understandable, java
+4th generation language-while loop, for loop
+5th generation-AI,ML,LLM(large model lang)
+
+
+opps concepts:-
+Encapsulation: combination of data members and methods is class and the process is class as encapsulation
+Abstraction: hiding of data(showing only essential information)
+Polymorphism: single name many forms e.g.. constructor
+Inheritance: subclass is uses the properties of super class
+Class: data members(instance variable) + methods
+Object: instance of class,
+coupling: dependency....(multiple modules are dependent on each other)tightly coupled
+cohesion: one class for one single principle.
+**high cohesion low coupling is good programming* 
+
+set-confuger
+get-print object
+workspace-where our code is stored or saved
+workbench-eclipse's full screen view
+view-Views are according to selected perspective(present top on consol)  or windows-->show views-->select
+perspective(on right top corner)-java ,java EE,JPA  or windows-->perspective-->select
+
+how to create project:
+
+file-->new-->java projects
+project name: ClassDemo (keep all as it is)-->next-->finish
+file-->new-->class
+class name: faculty
+Package- com.abc-->finish
+double click on project-->right click-->sources-->create geter seter
+
+
+Features of Java:
+1.simple to learn
+2.object oriented
+3.platform independent
+4.multithreaded
+5.secured
+6.robust
+7.portable
+8.Architecture Neutral
+9.Dynamic
+10.interpreted
+11.high performance
+12.distributed
+
+JVM-Java Virtual Machine
+-it is an abstract machine.
+-it does not exist physically i.e. virtual machine
+-it is a specification.
+-JVM provide run time in which java bite code  can be executed.
+-and JVM is performing some task-it will loads the code, verifies, executing and providing runtime environment
+
+JRE- Java Runtime Environment
+-set of different software tools
+-use of java application development
+-it is physically present.
+-it is implementation of JVM.
+-JRE=JVM + set of libraries + other files 
+
+JDK-java development kit
+-physically present
+-JDK=some development tools(loader, compiler(interpreter),documentation generator(java doc),copiler,archiver) + JRE
+
+object class methods:-
+1.wait()
+2.notify()
+3.notify all()
+4.equals()
+5.toString()
+6.hashCode()
+7.finalize()
+
+
+@override: annotation, meta data
+flow of execution:
+source code(.java) --> compiler-->bite code(.class)-->interpreter-->execute
+compiler : javac
+interpreter : java
+
+getter() : Accessor
+setter() : Mutator
+
+native method: some internal methods are use to execute java program i.e.rt.jar file
+
+layered application:
+presentation layer-->utility layer-->model layer-->database connection layer
+
+Synchronization : second task is start only when first task is completed, simultaneous execution. 
+
+Expretion and Statements:
+-Expretions are symbols that evaluate to some kind of value.
+-Expretion is 
+-Statement is a complete unit of instruction end by semicolon";"
+-keywords are reserve words
+-java keywords are set of words which helps for java programing of declaration, definition, calling, ...
+-Total keywords in java=52
+-Variables -a named storage location use to represent data that can be change while the program is running
+##scope of variable:-
+-class variable-static variable which is accessible only for that particular class
+-instance variable-any variable initialized
+-local variable-created for one method only
+
+
+Program Flow Controls:
+1.if-statement
+if(codition){ if the condition is true}
+
+2.if-else statement
+if(codition){ if the condition is true}
+else{if condition is false}
+
+3.if-else-if statement
+if(codition){ if the condition 1 is true}
+else if{condition 2){if condition 2 is true}
+else{if condition is false}
+
+q)eligibility for voting
+
+q) >40 pass
+   >50 second class
+   >60 first class
+   >70 distinction
+   >80 excellent
+
+Q)number is positive or negative
+Q) even odd
+Q)conditional construct- switch  1to7 days..   1to12 month...
+
+
+Loops in Java:
+1.while loop-entry control loop
+	while(condition){//statements will execute until condition is true}
+
+2..do while loop-exit control loop
+	do{//statements to execute}while(condition);
+
+Q) take input fron user and print all odd number
+Q) print table of any number
+q) print square of all number using do while take input from user
+
+2.for loop-
+	for(initialization ; condition ; updation){//stmts  execute}
+
+q)find factorial using for loop
+misulleneous:                                                                                                  
+1.ternery operator
+2.instanceOf()
+
+Garbage Collections in java: It is an automatic process for managing the memory in the Heap.
+
+Making Object Ready for garbage collection:
+-Nullifying the ref variable.
+-reassigning the ref variable. 
+-an object created in the  method.
+
+Requesting Garbage Collector:
+1. System.gc();s
+2. Runtime.getRuntime().gc();
+
+Finalize(): 
+-before destroying an object the garbage collector calls the finalize method.
+-to perform cleanup activity.
+
+super(): call parent call constructor i.e Object
+predefined packages=> 1)java.lang   2)java.util
+association:-
+ relationship between 2 independent classes is called as association
+ it may be 1) one-to-one  e.g. student-course
+           2) one-to-many e.g. country-state
+	   3)many-to-one  e.g. state-country
+	   4)many-to-many e.g. student-course
+
+aggregation :class - student : Weak association
+	   - one entity fails other will not affects
+composition : car - engine : Strong association
+		more restricted form of aggregation ,part of relationship
+
+
+//student class-id,name,address
+//subject class-name,s_id,duration
+///Association
+
+//mobile class - name,ram,rom
+//mobileStore - listOfMobiles
+//composition
+
+q)write a program to find out k-th elements from the array. 
+q)find out even numbers from given array of 10 elements
+q)find the smallest and largest element from the array
+q)check the element is palindrome or not
+q)code to create the array of products_take id of product form user to find product from products
+q)write code with switch case for different operations like- calculating area of circle,rectangle,triangle
+
+POJO class: plane plate Java object - it consist main, getter-setter, constructor-empty, parameterize ,toString() 
+
+object initialization - 1.parameterize constructor, 2.setter
+java generics- 
+******************************************************
+Inheritance:- 
+
+base/parent/super class
+child/derived/sub class - IS-A-Relationship
+use extends keyword to inherite the properties of parent class
+types- 
+1.single level i.e. A->B
+2.multi level  i.e. A->B->C
+3.multiple  i.e. B<-A, c<-A(not allowed in java) 
+4.hyrarchical i.e. A->B ,A->C 
+5.hybrid
+
+********
+
+Method Overriding: 
+
+****************
+methods-behavior
+instace variable-properties
+****************
+Multiple Inheritance : is achieve in java using Interface Concept.
+Interface :
+-coupling can be reduced(loose coupling can be achieve using interface). here coupling means=>dependency.
+-code readability
+-easy for debugging ,maintenance
+-reusability
+-it is the contract between interface and it's implementing class
+-all the abstract methods of interface should define by the implementing classes.
+-you can't instantiate an interface. we can create reference.
+e.g. Doable d = new Doable():
+     Doable d;
+     d = new rat();
+     d.eat();
+     d.run();
+     d.sleep();
+here d is a reference
+
+*****************************************
+Good Programming Practices:
+1. Name of interfaces are like, serializable, Cloneable ...here common part is able and it is always  included in interface name.
+2. When hierarchical relationship is not there the go to use/implement interface concept.
+   No hierarchy like ..class Kite, Plane, Bird-> having some same methods i.e. startFlying, takeTurn,          	stop ,,but with different definitions so there is no hierarchy.(simply kite, bird, plane are not 	related hierarchically ..inheritance s not there)
+3. When hierarchical relationship is there then use the abstract class.
+  hierarchy like..Electronic device->mobile->oppo->    ....hierarchy is always \/(wide range at 
+  starting and then decreasing with implementation/inheritance) ..like livings->human->male->young
+4.Method name should be in verb forms...it could be implementable by other classes.
+Let's see one example..
+***********************
+Interface:
+****************************
+public Interface Doable{ 
+				abstract eat();
+				abstract run();
+				abstract sleep();
+		       }
+***************************
+Implementing classes:
+***************************
+class Rat implements Doable() {
+				       eat() {}
+				       run() {}
+				       sleep() {}
+	   		      }
+class Frog implements Doable() {
+					eat() {}
+					run() {}
+					sleep() {}
+	   		       }
+class Snake implements Doable() {
+					eat() {}
+					run() {}
+					sleep() {}
+	   		        }
+*********************
+Main():
+********************
+Doable d = new Doable():
+     Doable d;
+     d = new rat();
+     d.eat();
+     d.run();
+     d.sleep();
+...here d is a reference
+********************************
+Dynamic binding, Runtime polymorphism
+Collection framework->set of interfaces and implementing classes
+
+
+kite,plane,bird
+hotel food-> fastFood, Snacks,Nonveg -->Eatable 
+****************************
+Marker Interface: Interface which is implementing already existing class
+***************************************
+exception propagation:
+
+delegation-exception using throws exception name
+handle exception using try and catch block
+
+Member Inner class: A Non-static class that created inside a class but outside a method. we can specify access modifiers for that class.
+-to create inner class object we need reference of outer class.
+-
+ex.
+class OuterClass{
+	//stmts
+	class InnerClass{
+		//stmts
+	}
+}
+ex 2)
+package com.abc;
+
+public class OuterClass {
+	int value=20;
+	//member inner class
+	class InnerClass{
+		void show() {
+			System.out.println("value is:"+value);
+		}
+	}
+	public static void main(String[] args) {
+		//object of outer class
+		OuterClass outer = new OuterClass();
+		//object of inner class
+		OuterClass.InnerClass inner = outer.new InnerClass();
+		inner.show();
+	}
+
+}
+*********************************************8
+Local Inner Class: A class that is created inside a method. it can be a block of code. and inside the outer class
+-we cant providev any access specifier or access modifier to them because the are local
+-we can make them final or abstract.
+package com.abc;
+
+public class Human {
+	private String speak = "Language";
+	void display() {
+		//Local Inner Class
+		class Man{
+			void talk() {
+				System.out.println("The man speaks:"+speak);
+			}
+		}
+		Man m = new Man();
+		m.talk();
+	}
+	public static void main(String []args)
+	{
+		Human h = new Human();
+		h.display();
+	}
+	
+}
+
+***************************************************
+Anonymous Inner class: it is an Inner Class without a name any for which only a single object is created.
+-it should be used if you have to override a method of class or interface.
+two ways to create=>
+-using class
+-using interface
+***************************************************************
+String : String is an object that represents the sequence character values.
+char[] s = {'j','a','v','a'}
+String str = new String(s);
+String str1 = "Sangamner";
+-string objects are immutable
+
+-In Java, the String class represents a sequence of characters. It is part of the java.lang package and is immutable, meaning once a String object is created, it cannot be modified. Here's a basic overview of how it appears:
+public class StringExample {
+    public static void main(String[] args) {
+        // Creating a string
+        String str = "Hello, World!";
+
+        // Using some methods from the String class
+        System.out.println(str); // Output: Hello, World!
+        System.out.println(str.length()); // Output: 13
+        System.out.println(str.charAt(0)); // Output: H
+        System.out.println(str.toUpperCase()); // Output: HELLO, WORLD!
+        System.out.println(str.substring(7)); // Output: World!
+    }
+}
+******************************************
+final: 
+1.for variable- if we apply final for variables the we cannot able to
+2.for methods-
+3.for class-
+******************************************
+String class already Implmented Serializable, Comparable and CharSequence.
+******************
+StringBuffer: it is threadsafe(means multiple can used at the same time or synchronized)
+
+-in StringBuffer it is possible to insert, delete, update characters.
+******************
+StringBuilder: it is not threadsafe(not synchronized)
+***********************************
+enums: enumerated datatypes: -fixed set of constants
+-constants are capital always
+ex. 
+public class Enums {
+	public enum Direction{EAST,WEST,NORTH,SOUTH};
+	public static void main(String[] args) {
+		for(Direction d : Direction.values())
+		{
+			System.out.println(d);
+		}
+	}
+
+}
+ex 2)
+package com.abc;
+
+public class Sesson {
+	public enum Season{RAINY,MONSOON,SUMMER,WINTER,SPRING,AUTUMN}
+	public static void main(String[] args) {
+		for(Season s : Season.values())
+		{
+			System.out.println(s);
+		}
+		System.out.println(Season.valueOf("RAINY").ordinal());
+
+	}
+
+}
+
+********************************************
+Exception Handling
+********************************************
+
+Exception: Abnormal termination of the Program/code.
+handling: we can write code which can handle the exception if that exception occurs or encounter in code
+
+1.Try: 
+2.Catch:
+3.Finally:
+4.throw:
+5.Throws:
+
+reasons:
+-code for inspection occur in the try block.
+-catch block is also called as exception handler.
+-catch block is not allow without try. multiple catch block can be use  with single try block.
+-finally block will be always executed even if exception raise or not.
+-throw explicitly throwing exception.
+-throws delegating exception handling task(means it doesn't handle exception itself but gives to handle others).
+-finally block is not Compulsory. and we can be add try block in finally block also
+Syntax of try and catch:
+	try{
+		//stmts throwing some exception
+	}catch()ExceptionType1 et1{
+		//Exception handling code
+	}
+	catch()ExceptionType2 et2{
+		//Exception handling code
+	}
+Syntax of Finally Block:
+	finally
+	{
+		//stmts to be excecuted irrespective of exception raised or not.
+	}
+*********************************************************************************************************
+Exception Hierarchy :
+				Throwable
+
+		Error					Exception
+	StackOverFlow				IOException
+	VirtualMachineError			SQLException
+	OutOfMemoryError			ClassNotFoundException
+						RuntimeException: 
+							1.ArithmaticException
+							2.NullPointException
+							3.NumberFormatException
+							4.IndexOutOfBoundsException:
+								1.ArrayIndexOutOfBoundsException
+								2.StringIndexOutOfBoundsException
+******************************************************************************************************
+					Types of Exception
+	1.Checked Exception:              2.Error:			3.Uncxhecked Exception:
+-Checked at compile time                                            -Not checked at compile time
+-SQLException							    -RuntimeException
+-IOException
+-recovery will be possible.					    -recovery is not possible.
+*******************************************************************************************************
+Ways to print the Exception message:
+1.objname.toString()
+2.objname.getMessage()
+3objname.printStackTrace()
+*********************************************************
+Exception Propagation:  if a method consist throws then any another method using which possibly raising exception that must throws same exception or handle it.
+-if some method using some exception then all method using that method must also throw the same exception  the it have to handle that exception or throws that exception otherwise it will give compile time error.
+********************************************************
+Range of thread is 1 to 10
+min: 1
+max:10
+nom:5
+Methods-
+setPriority()
+getPriority()
+*********************************
+Wrapper Types in java:
+use to convert any type into premitive.
+ex. 
+int num = Integer.parseInt("10");
+		System.out.println(num);
+**************************************************
+User Defined Exception:
+Ex.
+************************************************
+question 1) Marriage burro application
+registration or To find best life partner-on the basis of age of user 
+-Use user defined Exception.
+******************************************************************************************************
+Collection: 
+Framework:
+*************************************************
+collection interface->list->set(sorted)->queue->tree
+key:value pair (map)
+-value is unique, keys should not be repeated.
+******************************************************
+Collection Family : 
+					Iterable Interface
+					        |
+					Collection Interface
+			      /			 |                        \
+		List Interface            Queue Interface                  Set Interface
+		|                        |                               |
+		ArrayList 
+**************************************************************************************************
+Collection Interface:- this interface is acts as a root interface.
+-it is use to represent a group of objects as a single intity.
+List Interface-it  is the sub/child interface of collection interface.
+-we can add duplicate elements.
+Implementing class off list:-
+
+ArrayList :- Dynamic type of array
+-allowing duplicate type of elements.
+-insertion order is preserved.
+-null value insertion is also allowed.
+-Asynchronized methods.
+********************************************************************
+Linkelist :
+ -if we want to frequently perform insertion or deletion operation then linkedlist is best option
+-implements List.
+-implements clonable,serializable interface
+-also implements queue.
+-Synchronized
+-non-legucy class ,newly engineered class.
+-introduced in 1.2 version of java.
+********************************************************************
+Vector:
+-methods are Synchronized.
+-vector is a legucy class ,old class.
+introduced in 1.0 version.
+*************************************************************************************************
+Synchronization always come with big panulty of performance.
+ArrayList is always better than Vector.
+***************************************************************************************************
+Set: 
+-child Interface of collection interface.
+-it is not preserving the insertion order.
+-duplicate elements ar not allowed.
+-they are sorted set.
+-hashset and LinkedHashset are implementing class of set interface.
+
+Difference Between hashset and linkedhash set:
+-insertion order is not presereved in linkedhashset ahashset.nd reserved in 
+-hashset is introduce in 1.2 and linkedhashset is in 1.4
+-underline data structure in hash table.
+*********************************************************************************************
+Map: key:value pair
+1.hashmap
+2.LinkedhaahMap
+
+to store one entry of ineger in String we use: Map.entry();
+***************************************************************************************
+-it is present in java.lang package.
+-custom class will affect.
+-present in java.lang
+-provide single value sorting sequence. 
+-compareTo() method consist only parameter.
+ ***************************************************
+Comparator Interface:
+-provides multiple sorting sequence.
+-java.util
+-consist comare() method consist two object as a parameter.
+
+product: id,name,price
+idComparator,nameComparator,priceCoparator
+
+serialization and deserialization
+**************************************************************************************
+Thread: is lightweight process.
+-multithreading means multiple task perform at the same time.they cant block each other.
+-threads are independent.
+-it doesn't affect others if an exception occurs
+**************************************
+Types of Multitasking:
+1.process based - Multiprocessing.
+-each process allocates a separate memory area in case of multiprocessing.
+-heavy weight.
+-interprocess communication can be coslier.
+-switching among process will be time consuming.
+
+2.Threadbased - Multithreading.
+-threads share same address space.
+-thread is light weight
+-Comunication cost between threads is less.
+******************************************************************
+Usr defined Thread-
+1.Using thread class.
+2.By implementing Runable interface.
+******************************************************************
+states of thread: new , runnable, runing, dead, terminate.
+
+*****************************************
+Threa lss metods:
+1.Threadvield(): caused currently excecuted thread,or temporarily pause.
+2.run(): is normal method call.
+3.join(): if we use join method in that case the main thread will wait for the child thread to complete before it resumes its operation.
+4.sleep()
+5.interrupt()
+
+Assignment) -->create one class with the name display ...having method wish() with some string parameters
+....method should say goog morning 10 times.--->good morning to that name which is parameter.
+TestClientt--->two thread should be get created ..can be able to excecute wish method.
+-multithreading should happen there.
+=>ans: SynchronizedDemo
+
+assignment2) 
+in client class--customer object.
+beposition and withdrawing is functioning properly.
+withdrow - one thread
+deposite- one thread
+checkBalance-method inside withdraw
+***********************************************************************************************************************************************
+JDBC :Java database connectivity
+*********************************************************************************************************************************************
+Anomaly:
+DBMS(Database management system): storin data in the form of relations (Tables of rows and columns).
+*****************************************************************
+Databse Database Driver types:
+1.JDBC-ODBC bridge Driver- use to connect to the database.
+		         -convert jdbc method calls into the odbc function calls.
+			 -from java 8 they are not in use.
+2.Native driver-uses the cient side libraries.
+			-convert jdbc call into native calls.
+			-drawback-it is not return intirely in java.
+
+3.Network Protocol Driver- using middleware/application servers.
+		          -benders specific database protocol.
+			  -fully return in java.
+			-disadvantage-from client system network connection is required.
+
+4.Thin Driver-directly connected to the network specific database driver.
+			-fully return in java. 
+-no unother software is reqiured at client side and server side.
+
+*****************************************************************
+who provde database: venders
+1.oracle driver
+2.mysql driver
+3,cybage driver
+*****************************************************************
+Interfaces from JDBC API:
+1.Driver
+2.Connection
+3.Statement(sql quiries----every time compile and execute)
+4.PreparedStatement(sql quiries-----compile at onces only and execute afterwords may times)
+5.CallableStatement
+6.ResultSet(set of output queries)
+7.ResultSetMetaData
+8.DatabaseMetadata
+9.RowSet
+***************************************************************
+Classes from JDBC API:
+1.DriverManager(use to create connection with database,consist method getConnection(url,username,password) is a static method)
+	url-port number,path
+2.Blob
+3.Clob
+4.Types
+********************************************************************
+5 Steps to connect withDatabase:
+********************************************************************
+1.Register the drver class.       Class.forName("Name of Database Driver");
+2.Creation of  the connection object:   DriverManager.getConnection("url","Username","password");
+3.Create the Statment/preparedStatement object to execute the query:          Statement stmt = con.createStatement();
+4.Execute the query: 		  ResultSet rs =stmt.executeQuery(query);
+5.Close the connection object.     con.close();
